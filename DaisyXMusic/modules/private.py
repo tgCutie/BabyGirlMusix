@@ -41,7 +41,7 @@ def _start(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Add me to your Group 🙋‍♀️",
+                        "💜 ᴀᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏʜᴘ!",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
@@ -53,7 +53,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                 ],
-                [InlineKeyboardButton("🛠 Source Code 🛠", url=f"https://t.me/joinchat/EFX9Mt-mECQ5NTdl")],
+                
             ]
         ),
         reply_to_message_id=message.message_id,
@@ -63,12 +63,12 @@ def _start(client, message):
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
     await message.reply_text(
-        f"""**🔴 {PROJECT_NAME} is online**""",
+        f"""**📚 {PROJECT_NAME} is online**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
+                        "😈 Support Chat", url=f"https://t.me/{SUPPORT_GROUP}"
                     )
                 ]
             ]
@@ -124,12 +124,12 @@ def map(pos):
                     text="📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="💬 Support", url=f"https://t.me/joinchat/EFX9Mt-mECQ5NTdl"
+                    text="💬 Support", url=f"{SUPPORT_GROUP}"
                 ),
             ],
             [
                 InlineKeyboardButton(
-                    text="🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}"
+                    text="🛠 Source Code 🛠", url=f"https://t.me/joinchat/EFX9Mt-mECQ5NTdl"
                 )
             ],
             [InlineKeyboardButton(text="◀️", callback_data=f"help+{pos-1}")],
