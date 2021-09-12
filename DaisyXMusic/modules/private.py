@@ -53,7 +53,7 @@ def _start(client, message):
                         "💬 Support", url=f"https://t.me/{SUPPORT_GROUP}"
                     ),
                 ],
-                [InlineKeyboardButton("🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")],
+                [InlineKeyboardButton("🛠 Source Code 🛠", url=f"https://t.me/joinchat/EFX9Mt-mECQ5NTdl")],
             ]
         ),
         reply_to_message_id=message.message_id,
@@ -124,7 +124,7 @@ def map(pos):
                     text="📲 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"
                 ),
                 InlineKeyboardButton(
-                    text="💬 Support", url=f"https://t.me/{SUPPORT_GROUP}"
+                    text="💬 Support", url=f"https://t.me/joinchat/EFX9Mt-mECQ5NTdl"
                 ),
             ],
             [
@@ -147,12 +147,12 @@ def map(pos):
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def ghelp(_, message: Message):
     await message.reply_text(
-        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels.**""",
+        f"""**🙋‍♀️ Hello there! I can play music in the voice chats of telegram groups & channels Don't Forget to Add @weTemp.**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🟡 Click here for help 🟡",
+                        "Help Chahiye To Click me!",
                         url=f"https://t.me/{BOT_USERNAME}?start",
                     )
                 ]
